@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Too Clean — Limpeza de Alojamento Local em Lisboa</title>
+<meta name="description" content="Too Clean — limpeza profissional para Alojamento Local em Lisboa e arredores.">
+
+<style>
+:root{
+  --ink:#26312f;
+  --muted:#66716d;
+  --cream:#f7f4ee;
+  --sage:#dfe9e1;
+  --green:#708d7b;
+  --white:#ffffff;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:10;
+  padding:18px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#f7f4eef2;
+  border-bottom:1px solid #e7e2d8;
+}
+
+.logo{
+  font-weight:800;
+  letter-spacing:3px;
+  font-size:22px;
+}
+
+.logo span{
+  color:var(--green);
+}
+
+.links{
+  display:flex;
+  gap:28px;
+  font-size:14px;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--ink);
+  color:white;
+  border-radius:999px;
+  padding:14px 23px;
+  font-weight:700;
+}
+
+.btn.alt{
+  background:transparent;
+  color:var(--ink);
+  border:1px solid #cbd3cd;
+}
+
+.hero{
+  min-height:100vh;
+  padding:150px 7% 80px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:55px;
+  align-items:center;
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:3px;
+  color:var(--green);
+  font-weight:800;
+  font-size:12px;
+  margin-bottom:18px;
+}
+
+h1,h2{
+  font-family:Georgia,serif;
+  line-height:1.02;
+}
+
+h1{
+  font-size:clamp(50px,7vw,82px);
+  margin:0 0 25px;
+}
+
+h1 em{
+  font-weight:400;
+  color:var(--green);
+}
+
+h2{
+  font-size:48px;
+  margin:0 0 18px;
+}
+
+.hero p,.sub{
+  color:var(--muted);
+  font-size:18px;
+  max-width:620px;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.visual{
+  min-height:480px;
+  border-radius:40px;
+  background:var(--sage);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  position:relative;
+}
+
+.visual:before{
+  content:"";
+  width:330px;
+  height:330px;
+  border-radius:50%;
+  background:white;
+  opacity:.7;
+  position:absolute;
+}
+
+.card{
+  position:relative;
+  width:70%;
+  padding:38px;
+  background:white;
+  border-radius:26px;
+  text-align:center;
+  box-shadow:0 25px 60px #26312f18;
+}
+
+.card .emoji{
+  font-size:60px;
+}
+
+.card h3{
+  font-family:Georgia,serif;
+  font-size:27px;
+  margin:8px 0;
+}
+
+.card p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+section{
+  padding:95px 7%;
+}
+
+.white{
+  background:white;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:42px;
+}
+
+.service{
+  background:var(--cream);
+  border:1px solid #e7e5df;
+  border-radius:22px;
+  padding:28px 23px;
+}
+
+.icon{
+  font-size:30px;
+}
+
+.service h3{
+  margin:14px 0 7px;
+}
+
+.service p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.quote{
+  background:var(--sage);
+  border-radius:30px;
+  padding:48px;
+  font:32px/1.25 Georgia,serif;
+}
+
+.points{
+  display:grid;
+  gap:20px;
+}
+
+.point{
+  display:flex;
+  gap:14px;
+}
+
+.check{
+  width:30px;
+  height:30px;
+  flex:none;
+  border-radius:50%;
+  background:var(--green);
+  color:white;
+  text-align:center;
+  line-height:30px;
+}
+
+.contact{
+  background:var(--ink);
+  color:white;
+  text-align:center;
+}
+
+.contact .sub{
+  margin:0 auto;
+  color:#d5ddd9;
+}
+
+.contact .btn{
+  background:white;
+  color:var(--ink);
+  margin-top:20px;
+}
+
+footer{
+  padding:28px 7%;
+  background:white;
+  color:var(--muted);
+  font-size:13px;
+  display:flex;
+  justify-content:space-between;
+}
+
+@media(max-width:800px){
+
+  .links{
+    display:none;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    padding-top:125px;
+  }
+
+  .visual{
+    min-height:360px;
+  }
+
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .two{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+}
+
+@media(max-width:520px){
+
+  section{
+    padding:70px 6%;
+  }
+
+  .hero{
+    padding-left:6%;
+    padding-right:6%;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  h2{
+    font-size:40px;
+  }
+
+  footer{
+    display:block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<a class="logo" href="#">
+TOO <span>CLEAN</span>
+</a>
+
+<div class="links">
+<a href="#servicos">Serviços</a>
+<a href="#sobre">Sobre nós</a>
+<a href="#contacto">Contacto</a>
+</div>
+
+<a class="btn" href="#contacto">
+Pedir orçamento
+</a>
+
+</nav>
+
+
+<header class="hero">
+
+<div>
+
+<div class="eyebrow">
+Alojamento Local · Lisboa
+</div>
+
+<h1>
+O seu espaço.<br>
+<em>Too Clean.</em>
+</h1>
+
+<p>
+Limpeza profissional entre reservas para que cada hóspede encontre o seu alojamento impecável, fresco e pronto a receber.
+</p>
+
+<div class="actions">
+
+<a class="btn" href="#contacto">
+Quero um orçamento
+</a>
+
+<a class="btn alt" href="#servicos">
+Ver serviços
+</a>
+
+</div>
+
+</div>
+
+
+<div class="visual">
+
+<div class="card">
+
+<div class="emoji">
+✨🧽
+</div>
+
+<h3>
+Pronto para o próximo hóspede
+</h3>
+
+<p>
+Detalhe, cuidado e consistência em cada limpeza.
+</p>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section id="servicos" class="white">
+
+<div class="eyebrow">
+O que fazemos
+</div>
+
+<h2>
+Mais do que limpar.<br>
+Preparar para receber.
+</h2>
+
+<p class="sub">
+Um serviço pensado para proprietários e gestores de Alojamento Local que querem tranquilidade entre cada reserva.
+</p>
+
+
+<div class="grid">
+
+<div class="service">
+<div class="icon">🛏️</div>
+<h3>Quartos</h3>
+<p>
+Limpeza, organização e preparação das camas para a próxima estadia.
+</p>
+</div>
+
+
+<div class="service">
+<div class="icon">🚿</div>
+<h3>Casas de banho</h3>
+<p>
+Higienização cuidada de superfícies e detalhes.
+</p>
+</div>
+
+
+<div class="service">
+<div class="icon">🍽️</div>
+<h3>Cozinha</h3>
+<p>
+Limpeza e organização para deixar o espaço pronto a usar.
+</p>
+</div>
+
+
+<div class="service">
+<div class="icon">✨</div>
+<h3>Verificação final</h3>
+<p>
+Revisão do alojamento antes da chegada do hóspede.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="sobre">
+
+<div class="two">
+
+<div class="quote">
+“Uma equipa pequena, um cuidado grande com cada alojamento.”
+</div>
+
+
+<div>
+
+<div class="eyebrow">
+Porquê a Too Clean?
+</div>
+
+<h2>
+Duas pessoas.<br>
+Um padrão de confiança.
+</h2>
+
+<p class="sub">
+Trabalhamos de forma próxima e cuidada, com atenção aos detalhes que fazem diferença na experiência do hóspede.
+</p>
+
+
+<div class="points">
+
+<div class="point">
+
+<div class="check">✓</div>
+
+<div>
+<b>Foco em Alojamento Local</b><br>
+<span class="sub" style="font-size:14px">
+Pensado para as necessidades entre reservas.
+</span>
+</div>
+
+</div>
+
+
+<div class="point">
+
+<div class="check">✓</div>
+
+<div>
+<b>Atenção aos detalhes</b><br>
+<span class="sub" style="font-size:14px">
+Não queremos apenas que esteja limpo — queremos que esteja pronto.
+</span>
+</div>
+
+</div>
+
+
+<div class="point">
+
+<div class="check">✓</div>
+
+<div>
+<b>Comunicação direta</b><br>
+<span class="sub" style="font-size:14px">
+Um contacto simples para facilitar o seu dia.
+</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contacto" class="contact">
+
+<div class="eyebrow" style="color:#b8cdbf">
+Vamos falar?
+</div>
+
+<h2>
+O seu próximo hóspede<br>
+merece entrar num espaço Too Clean.
+</h2>
+
+<p class="sub">
+Envie-nos os detalhes do seu alojamento e peça um orçamento sem compromisso.
+</p>
+
+<a class="btn" href="mailto:tooclean@email.com">
+✉️ Pedir orçamento
+</a>
+
+</section>
+
+
+<footer>
+
+<div>
+<b>TOO CLEAN</b> · Limpeza de Alojamento Local
+</div>
+
+<div>
+Lisboa e arredores · © 2026 Too Clean
+</div>
+
+</footer>
+
+</body>
+</html>
