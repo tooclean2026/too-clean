@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Too Clean - Serviços Profissionais de Limpeza</title>
   
+  <!-- Ícones e Fonte -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -25,11 +25,7 @@
       --white: #FFFFFF;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -39,7 +35,6 @@
       padding-bottom: 90px;
     }
 
-    /* Cabeçalho Clean */
     header {
       background-color: var(--white);
       text-align: center;
@@ -63,14 +58,12 @@
       letter-spacing: 1px;
     }
 
-    /* Content Container */
     .container {
       max-width: 850px;
       margin: 0 auto;
       padding: 35px 20px;
     }
 
-    /* Secção Sobre Nós */
     .about-card {
       background-color: var(--white);
       border-radius: 16px;
@@ -90,5 +83,216 @@
       gap: 10px;
     }
 
-    .section-title i {
-      color: var(--green
+    .section-title i { color: var(--green-sage); }
+
+    .about-text {
+      color: var(--text-dark);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .highlight-badge {
+      display: inline-block;
+      background-color: var(--green-light);
+      color: var(--green-dark);
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-bottom: 35px;
+    }
+
+    .service-card {
+      background-color: var(--white);
+      border-radius: 14px;
+      padding: 24px;
+      border: 1px solid var(--accent-nude);
+    }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      background-color: var(--green-light);
+      color: var(--green-dark);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-sage));
+      color: var(--white);
+      border-radius: 20px;
+      padding: 35px 25px;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 24px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-whatsapp { background-color: var(--whatsapp-green); color: var(--white); }
+    .btn-email { background-color: var(--white); color: var(--green-dark); }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--whatsapp-green);
+      color: var(--white);
+      border-radius: 50px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-title">Too Clean</div>
+    <div class="brand-tagline">Serviços Profissionais de Limpeza</div>
+  </header>
+
+  <div class="container">
+
+    <div class="about-card">
+      <span class="highlight-badge">+10 Anos de Experiência</span>
+      <h2 class="section-title">
+        <i class="fa-solid fa-user-shield"></i> Sobre Nós
+      </h2>
+      <p class="about-text">
+        Somos uma equipa de duas pessoas profissionais com mais de 10 anos de experiência especializada no setor de Alojamentos Locais. Dedicamo-nos a entregar um serviço minucioso, transparente e de elevada qualidade, garantindo a máxima higienização e apresentação dos seus espaços.
+      </p>
+    </div>
+
+    <h2 class="section-title" style="margin-bottom: 20px;">
+      <i class="fa-solid fa-sparkles"></i> Os Nossos Serviços
+    </h2>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-key"></i></div>
+        <h3>Alojamento Local</h3>
+        <p>Limpezas profundas e gestão de turn over rápidas entre estadias de hóspedes.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-warehouse"></i></div>
+        <h3>Garagens</h3>
+        <p>Remoção de poeiras, marcas de pneus e higienização profunda de pisos.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
+        <h3>Limpezas Fim de Obra</h3>
+        <p>Remoção de resíduos, tinta e pós após remodelações ou construções.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Escritórios</h3>
+        <p>Manutenção periódica para manter um ambiente de trabalho higienizado e produtivo.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+        <h3>Condomínios</h3>
+        <p>Limpeza de áreas comuns, entradas, escadarias e elevadores.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+        <h3>Espaços Comerciais e Mais</h3>
+        <p>Soluções personalizadas à medida das necessidades do seu negócio.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h2>Peça o Seu Orçamento Gratuito</h2>
+      <p>Entre em contacto direto connosco e receba uma proposta adaptada ao seu espaço.</p>
+      
+      <div class="cta-buttons">
+        <a href="mailto:tooclean2026@gmail.com?subject=Pedido%20de%20Or%C3%A7amento" class="btn btn-email">
+          <i class="fa-regular fa-envelope"></i> Pedir por E-mail
+        </a>
+
+        <a href="https://wa.me/qr/5CH7GBQLHW7GM1" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Pedir via WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="https://wa.me/qr/5CH7GBQLHW7GM1" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+    <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+  </a>
+
+  <footer>
+    &copy; Too Clean - Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
