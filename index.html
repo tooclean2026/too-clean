@@ -1,32 +1,641 @@
-<!-- Contactos Too Clean -->
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="phone">
-  📞 <a href="tel:+351927702072">927 702 072</a>
-</div>
+  <title>Too Clean | Limpezas em Lisboa</title>
 
-<a class="button whatsapp"
-   href="https://wa.me/351927702072"
-   target="_blank">
-  💬 WhatsApp — 927 702 072
-</a>
+  <meta
+    name="description"
+    content="Too Clean - Serviços de limpeza em Lisboa. Alojamento Local, condomínios, garagens, escritórios, limpeza pós-obra e limpezas gerais."
+  >
 
-<div class="phone">
-  📞 <a href="tel:+351913396838">913 396 838</a>
-</div>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<a class="button whatsapp"
-   href="https://wa.me/351913396838"
-   target="_blank">
-  💬 WhatsApp — 913 396 838
-</a>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+      background: #fff;
+      line-height: 1.6;
+    }
 
-<div class="email">
-  📧 <a href="mailto:geraltooclean@gmail.com">
-    geraltooclean@gmail.com
+    header {
+      background: linear-gradient(135deg, #f7c6d9, #dff7f2);
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 44px;
+      font-weight: bold;
+      color: #333;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #e889ae;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 6px;
+    }
+
+    .hero {
+      padding: 75px 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e889ae;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 720px;
+      margin: 0 auto 30px;
+      color: #555;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #e889ae;
+      color: white;
+      padding: 15px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .button.whatsapp {
+      background: #25D366;
+    }
+
+    .button.phone {
+      background: #333;
+    }
+
+    .button.email-button {
+      background: #e889ae;
+    }
+
+    section {
+      padding: 65px 20px;
+    }
+
+    .services {
+      background: #f9f9f9;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 22px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about p {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .highlight {
+      margin-top: 30px;
+      padding: 25px;
+      background: #f9f9f9;
+      border-radius: 18px;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #dff7f2, #f7c6d9);
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .contact > p {
+      font-size: 19px;
+      margin-bottom: 30px;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 30px 20px;
+      border-radius: 20px;
+    }
+
+    .contact-item {
+      margin: 15px 0;
+      font-size: 20px;
+    }
+
+    .contact-item a {
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contact-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+
+      .logo {
+        font-size: 36px;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .contact h2 {
+        font-size: 29px;
+      }
+
+      .button {
+        width: 100%;
+        max-width: 330px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+
+  <header>
+    <div class="logo">
+      Too <span>Clean</span> ✨
+    </div>
+
+    <p>
+      Limpeza feita com carinho, cuidado e confiança.
+    </p>
+  </header>
+
+
+  <!-- APRESENTAÇÃO -->
+
+  <section class="hero">
+
+    <h1>
+      O seu espaço limpo.<br>
+      <span>Sem preocupações.</span>
+    </h1>
+
+    <p>
+      Serviços de limpeza profissionais em Lisboa,
+      com atenção a cada detalhe.
+    </p>
+
+    <div class="buttons">
+
+      <a
+        class="button whatsapp"
+        href="https://wa.me/351927702072"
+        target="_blank"
+      >
+        💬 WhatsApp — 927 702 072
+      </a>
+
+      <a
+        class="button whatsapp"
+        href="https://wa.me/351913396838"
+        target="_blank"
+      >
+        💬 WhatsApp — 913 396 838
+      </a>
+
+      <a
+        class="button phone"
+        href="tel:+351927702072"
+      >
+        📞 Ligar — 927 702 072
+      </a>
+
+      <a
+        class="button phone"
+        href="tel:+351913396838"
+      >
+        📞 Ligar — 913 396 838
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVIÇOS -->
+
+  <section class="services">
+
+    <h2 class="section-title">
+      Os nossos serviços
+    </h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🏠</div>
+
+        <h3>
+          Alojamento Local
+        </h3>
+
+        <p>
+          Limpeza e preparação de apartamentos
+          entre reservas, para receber novos hóspedes.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏢</div>
+
+        <h3>
+          Condomínios
+        </h3>
+
+        <p>
+          Limpeza de entradas, escadas, elevadores,
+          zonas comuns e outros espaços partilhados.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🚗</div>
+
+        <h3>
+          Garagens
+        </h3>
+
+        <p>
+          Limpeza e manutenção de garagens,
+          parques e zonas de estacionamento.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">💼</div>
+
+        <h3>
+          Escritórios
+        </h3>
+
+        <p>
+          Espaços de trabalho limpos, organizados
+          e agradáveis para colaboradores e clientes.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏗️</div>
+
+        <h3>
+          Limpeza Pós-Obra
+        </h3>
+
+        <p>
+          Remoção de pó, resíduos e sujidade
+          após obras e remodelações.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">✨</div>
+
+        <h3>
+          Limpezas Gerais
+        </h3>
+
+        <p>
+          Limpezas profundas para casas,
+          apartamentos e outros espaços.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏨</div>
+
+        <h3>
+          Hotéis e Alojamento
+        </h3>
+
+        <p>
+          Apoio de limpeza para hotéis,
+          apartamentos turísticos e alojamento.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">🏟️</div>
+
+        <h3>
+          Espaços e Eventos
+        </h3>
+
+        <p>
+          Limpeza de espaços, instalações,
+          eventos e zonas de utilização pública.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOBRE -->
+
+  <section>
+
+    <div class="about">
+
+      <h2 class="section-title">
+        Porquê a Too Clean?
+      </h2>
+
+      <p>
+        Somos uma equipa dedicada a deixar
+        cada espaço limpo, organizado e pronto
+        para ser utilizado.
+      </p>
+
+      <p>
+        Trabalhamos com responsabilidade,
+        cuidado e atenção aos detalhes.
+      </p>
+
+      <p>
+        Estamos disponíveis para serviços
+        pontuais ou regulares.
+      </p>
+
+      <div class="highlight">
+
+        <h3>
+          📍 Lisboa e arredores
+        </h3>
+
+        <p>
+          Procuramos novas parcerias com
+          particulares, empresas, gestores de
+          Alojamento Local, condomínios,
+          escritórios e outros espaços.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTOS -->
+
+  <section class="contact">
+
+    <h2>
+      Precisa de uma limpeza?
+    </h2>
+
+    <p>
+      Peça já o seu orçamento sem compromisso.
+    </p>
+
+    <div class="contact-box">
+
+      <div class="contact-item">
+        📞
+        <a href="tel:+351927702072">
+          927 702 072
+        </a>
+      </div>
+
+      <div class="contact-buttons">
+
+        <a
+          class="button whatsapp"
+          href="https://wa.me/351927702072"
+          target="_blank"
+        >
+          💬 WhatsApp 927 702 072
+        </a>
+
+      </div>
+
+
+      <div class="contact-item">
+        📞
+        <a href="tel:+351913396838">
+          913 396 838
+        </a>
+      </div>
+
+      <div class="contact-buttons">
+
+        <a
+          class="button whatsapp"
+          href="https://wa.me/351913396838"
+          target="_blank"
+        >
+          💬 WhatsApp 913 396 838
+        </a>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        📧
+        <a href="mailto:geraltooclean@gmail.com">
+          geraltooclean@gmail.com
+        </a>
+
+      </div>
+
+      <div class="contact-buttons">
+
+        <a
+          class="button email-button"
+          href="mailto:geraltooclean@gmail.com"
+        >
+          📧 Enviar email
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    <p>
+      <strong>Too Clean ✨</strong>
+    </p>
+
+    <p>
+      Serviços de limpeza em Lisboa
+    </p>
+
+    <p>
+      📞 927 702 072
+    </p>
+
+    <p>
+      📞 913 396 838
+    </p>
+
+    <p>
+      📧 geraltooclean@gmail.com
+    </p>
+
+    <p>
+      © 2026 Too Clean. Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/351927702072"
+    target="_blank"
+    aria-label="Contactar Too Clean pelo WhatsApp"
+  >
+    💬
   </a>
-</div>
 
-<a class="button"
-   href="mailto:geraltooclean@gmail.com">
-  📧 Enviar email
-</a>
+</body>
+</html>
