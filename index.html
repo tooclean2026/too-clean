@@ -4,193 +4,400 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Too Clean | Limpezas em Lisboa</title>
+  <title>Too Clean | Limpezas Profissionais em Lisboa</title>
 
   <meta
     name="description"
-    content="Too Clean - Serviços de limpeza em Lisboa. Alojamento Local, condomínios, garagens, escritórios, limpeza pós-obra e limpezas gerais."
+    content="Too Clean — serviços profissionais de limpeza em Lisboa. Alojamento Local, condomínios, escritórios, garagens, pós-obra e limpezas gerais."
   >
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: #333;
-      background: #fff;
+      color: #252525;
+      background: #ffffff;
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      background: linear-gradient(135deg, #f7c6d9, #dff7f2);
-      padding: 30px 20px;
-      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      font-size: 44px;
-      font-weight: bold;
-      letter-spacing: 2px;
+      font-size: 30px;
+      font-weight: 800;
+      color: #222;
+      letter-spacing: -1px;
     }
 
     .logo span {
-      color: #e889ae;
+      color: #e78eb1;
     }
 
-    header p {
-      font-size: 18px;
-      margin-top: 6px;
+    nav a {
+      margin-left: 25px;
+      color: #333;
+      font-weight: 600;
+      font-size: 14px;
     }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      padding: 75px 20px;
-      text-align: center;
+      min-height: 720px;
+      padding: 150px 7% 90px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 90% 20%, #f9dce8 0, transparent 35%),
+        radial-gradient(circle at 10% 80%, #dff5f1 0, transparent 35%),
+        linear-gradient(135deg, #ffffff, #fdf8fa);
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 15px;
+      background: #f7e2eb;
+      color: #b75f84;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 22px;
     }
 
     .hero h1 {
-      font-size: 44px;
-      line-height: 1.2;
-      margin-bottom: 20px;
+      font-size: clamp(45px, 7vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
     }
 
     .hero h1 span {
-      color: #e889ae;
+      color: #e78eb1;
     }
 
     .hero p {
-      font-size: 20px;
-      max-width: 720px;
-      margin: 0 auto 30px;
-      color: #555;
+      max-width: 610px;
+      font-size: 19px;
+      color: #606060;
+      margin-bottom: 32px;
     }
 
-    .buttons {
+    .hero-buttons {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
-    .button {
-      display: inline-block;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 15px 24px;
-      border-radius: 30px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: 0.25s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: #e78eb1;
       color: white;
-      text-decoration: none;
-      font-weight: bold;
+      box-shadow: 0 8px 25px rgba(231, 142, 177, 0.28);
+    }
+
+    .btn-dark {
+      background: #252525;
+      color: white;
+    }
+
+    .btn-green {
+      background: #25d366;
+      color: white;
+    }
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .stats {
+      margin-top: -35px;
+      position: relative;
+      z-index: 2;
+      padding: 0 7%;
+    }
+
+    .stats-box {
+      max-width: 1050px;
+      margin: auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.10);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 25px;
+      text-align: center;
+    }
+
+    .stat {
+      padding: 10px;
+    }
+
+    .stat:not(:last-child) {
+      border-right: 1px solid #eee;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 3px;
+    }
+
+    .stat span {
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      padding: 100px 7%;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .section-heading small {
+      color: #d6789d;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-heading h2 {
+      font-size: 42px;
+      margin: 10px 0 15px;
+      letter-spacing: -1px;
+    }
+
+    .section-heading p {
+      color: #707070;
       font-size: 17px;
     }
 
-    .whatsapp {
-      background: #25D366;
-    }
-
-    .phone {
-      background: #333;
-    }
-
-    .email-button {
-      background: #e889ae;
-    }
-
-    section {
-      padding: 65px 20px;
-    }
-
-    .services {
-      background: #f9f9f9;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 34px;
-      margin-bottom: 40px;
-    }
-
-    .cards {
+    .service-grid {
       max-width: 1100px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    .card {
+    .service-card {
+      padding: 32px 26px;
+      border: 1px solid #eee;
+      border-radius: 20px;
       background: white;
-      padding: 30px 22px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.25s;
     }
 
-    .icon {
-      font-size: 45px;
-      margin-bottom: 15px;
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
     }
 
-    .card h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 15px;
+      background: #f8e4ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      margin-bottom: 20px;
     }
 
-    .card p {
-      color: #666;
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 9px;
     }
+
+    .service-card p {
+      color: #707070;
+      font-size: 15px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
-      max-width: 900px;
+      padding: 100px 7%;
+      background: #f5faf9;
+    }
+
+    .about-container {
+      max-width: 1050px;
       margin: auto;
-      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 10px 0 20px;
+    }
+
+    .about h2 span {
+      color: #e78eb1;
     }
 
     .about p {
-      font-size: 18px;
-      margin-bottom: 16px;
+      color: #656565;
+      margin-bottom: 15px;
     }
 
-    .highlight {
-      margin-top: 30px;
-      padding: 25px;
-      background: #f9f9f9;
-      border-radius: 18px;
+    .about-list {
+      margin-top: 25px;
+      list-style: none;
     }
+
+    .about-list li {
+      margin: 12px 0;
+      font-weight: 600;
+    }
+
+    .about-card {
+      background: white;
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+    }
+
+    .about-card h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .about-card p {
+      font-size: 16px;
+    }
+
+    /* =========================
+       PARTNERSHIPS
+    ========================= */
+
+    .business {
+      padding: 100px 7%;
+    }
+
+    .business-box {
+      max-width: 1050px;
+      margin: auto;
+      padding: 55px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #292929, #414141);
+      color: white;
+      text-align: center;
+    }
+
+    .business-box h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .business-box p {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      color: #e5e5e5;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
-      background: linear-gradient(135deg, #dff7f2, #f7c6d9);
+      padding: 100px 7%;
+      background: linear-gradient(135deg, #f9dce8, #e1f6f1);
+    }
+
+    .contact-container {
+      max-width: 850px;
+      margin: auto;
       text-align: center;
     }
 
     .contact h2 {
-      font-size: 36px;
+      font-size: 44px;
       margin-bottom: 12px;
     }
 
-    .contact > p {
+    .contact > .contact-container > p {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .contact-info {
+      background: rgba(255,255,255,0.82);
+      border-radius: 22px;
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    .contact-line {
+      margin: 15px 0;
       font-size: 19px;
-      margin-bottom: 30px;
     }
 
-    .contact-box {
-      max-width: 700px;
-      margin: auto;
-      background: rgba(255,255,255,0.85);
-      padding: 30px 20px;
-      border-radius: 20px;
-    }
-
-    .contact-item {
-      margin: 18px 0;
-      font-size: 21px;
-    }
-
-    .contact-item a {
-      color: #333;
-      font-weight: bold;
-      text-decoration: none;
+    .contact-line a {
+      color: #252525;
+      font-weight: 700;
     }
 
     .contact-buttons {
@@ -198,19 +405,39 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 25px;
+      margin-top: 25px;
     }
 
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
-      background: #333;
+      background: #242424;
       color: white;
       text-align: center;
-      padding: 28px 20px;
+      padding: 30px 20px;
+    }
+
+    footer .footer-logo {
+      font-size: 25px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    footer .footer-logo span {
+      color: #e78eb1;
     }
 
     footer p {
-      margin: 5px 0;
+      color: #bbb;
+      font-size: 14px;
+      margin: 4px 0;
     }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
 
     .floating-whatsapp {
       position: fixed;
@@ -219,46 +446,105 @@
       width: 62px;
       height: 62px;
       border-radius: 50%;
-      background: #25D366;
+      background: #25d366;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-decoration: none;
-      font-size: 30px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-      z-index: 1000;
+      font-size: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.20);
+      z-index: 100;
     }
 
-    @media (max-width: 600px) {
+    /* =========================
+       MOBILE
+    ========================= */
 
-      .logo {
-        font-size: 36px;
+    @media (max-width: 800px) {
+
+      header {
+        padding: 20px;
+      }
+
+      nav {
+        display: none;
       }
 
       .hero {
-        padding: 55px 18px;
+        min-height: auto;
+        padding: 125px 20px 90px;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 50px;
+        letter-spacing: -2px;
       }
 
       .hero p {
         font-size: 17px;
       }
 
-      .section-title {
-        font-size: 28px;
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .stats {
+        margin-top: -25px;
+        padding: 0 15px;
+      }
+
+      .stats-box {
+        grid-template-columns: 1fr;
+      }
+
+      .stat:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .services,
+      .about,
+      .business,
+      .contact {
+        padding: 75px 20px;
+      }
+
+      .section-heading h2,
+      .about h2 {
+        font-size: 34px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .about-card {
+        padding: 28px;
+      }
+
+      .business-box {
+        padding: 35px 22px;
+      }
+
+      .business-box h2 {
+        font-size: 31px;
       }
 
       .contact h2 {
-        font-size: 29px;
+        font-size: 35px;
       }
 
-      .button {
+      .contact-info {
+        padding: 25px 15px;
+      }
+
+      .contact-buttons .btn {
         width: 100%;
-        max-width: 330px;
       }
     }
   </style>
@@ -266,56 +552,86 @@
 
 <body>
 
-  <!-- CABEÇALHO -->
+  <!-- HEADER -->
 
   <header>
     <div class="logo">
       Too <span>Clean</span> ✨
     </div>
 
-    <p>
-      Limpeza feita com carinho, cuidado e confiança.
-    </p>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
 
-  <!-- APRESENTAÇÃO -->
+  <!-- HERO -->
 
   <section class="hero">
 
-    <h1>
-      O seu espaço limpo.<br>
-      <span>Sem preocupações.</span>
-    </h1>
+    <div class="hero-content">
 
-    <p>
-      Serviços de limpeza profissionais em Lisboa,
-      com atenção a cada detalhe.
-    </p>
+      <div class="tag">
+        ✨ LIMPEZA PROFISSIONAL EM LISBOA
+      </div>
 
-    <div class="buttons">
+      <h1>
+        Espaços limpos.<br>
+        <span>Mais tranquilidade.</span>
+      </h1>
 
-      <a
-        class="button whatsapp"
-        href="https://wa.me/351927702072"
-        target="_blank"
-      >
-        💬 WhatsApp
-      </a>
+      <p>
+        A Too Clean cuida da limpeza da sua casa,
+        negócio ou espaço profissional com atenção,
+        responsabilidade e cuidado em cada detalhe.
+      </p>
 
-      <a
-        class="button phone"
-        href="tel:+351927702072"
-      >
-        📞 927 702 072
-      </a>
+      <div class="hero-buttons">
 
-      <a
-        class="button phone"
-        href="tel:+351961318765"
-      >
-        📞 961 318 765
-      </a>
+        <a
+          href="https://wa.me/351927702072"
+          target="_blank"
+          class="btn btn-green"
+        >
+          💬 Pedir orçamento
+        </a>
+
+        <a
+          href="#servicos"
+          class="btn btn-primary"
+        >
+          Ver serviços
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- STATS -->
+
+  <section class="stats">
+
+    <div class="stats-box">
+
+      <div class="stat">
+        <strong>📍 Lisboa</strong>
+        <span>e arredores</span>
+      </div>
+
+      <div class="stat">
+        <strong>✨ Profissional</strong>
+        <span>atenção aos detalhes</span>
+      </div>
+
+      <div class="stat">
+        <strong>🤝 Flexível</strong>
+        <span>serviços regulares ou pontuais</span>
+      </div>
 
     </div>
 
@@ -324,84 +640,108 @@
 
   <!-- SERVIÇOS -->
 
-  <section class="services">
+  <section class="services" id="servicos">
 
-    <h2 class="section-title">
-      Os nossos serviços
-    </h2>
+    <div class="section-heading">
 
-    <div class="cards">
+      <small>O que fazemos</small>
 
-      <div class="card">
-        <div class="icon">🏠</div>
+      <h2>
+        Soluções de limpeza para cada espaço
+      </h2>
+
+      <p>
+        Desde uma limpeza profunda até ao apoio
+        regular de empresas e alojamentos.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service-card">
+
+        <div class="service-icon">🏠</div>
+
         <h3>Alojamento Local</h3>
+
         <p>
-          Limpeza e preparação de apartamentos entre reservas,
-          para receber novos hóspedes.
+          Limpeza e preparação entre reservas,
+          deixando cada alojamento pronto para
+          receber os próximos hóspedes.
         </p>
+
       </div>
 
-      <div class="card">
-        <div class="icon">🏢</div>
+
+      <div class="service-card">
+
+        <div class="service-icon">🏢</div>
+
         <h3>Condomínios</h3>
+
         <p>
-          Limpeza de entradas, escadas, elevadores,
-          zonas comuns e espaços partilhados.
+          Entradas, escadas, elevadores,
+          corredores e restantes zonas comuns.
         </p>
+
       </div>
 
-      <div class="card">
-        <div class="icon">🚗</div>
-        <h3>Garagens</h3>
-        <p>
-          Limpeza e manutenção de garagens,
-          parques e zonas de estacionamento.
-        </p>
-      </div>
 
-      <div class="card">
-        <div class="icon">💼</div>
+      <div class="service-card">
+
+        <div class="service-icon">💼</div>
+
         <h3>Escritórios</h3>
+
         <p>
-          Espaços de trabalho limpos, organizados
-          e agradáveis.
+          Manutenção de espaços de trabalho
+          limpos, organizados e agradáveis.
         </p>
+
       </div>
 
-      <div class="card">
-        <div class="icon">🏗️</div>
-        <h3>Limpeza Pós-Obra</h3>
+
+      <div class="service-card">
+
+        <div class="service-icon">🚗</div>
+
+        <h3>Garagens</h3>
+
         <p>
-          Remoção de pó, resíduos e sujidade
-          após obras e remodelações.
+          Limpeza de garagens, parques de
+          estacionamento e zonas comuns.
         </p>
+
       </div>
 
-      <div class="card">
-        <div class="icon">✨</div>
+
+      <div class="service-card">
+
+        <div class="service-icon">🏗️</div>
+
+        <h3>Pós-Obra</h3>
+
+        <p>
+          Limpeza profunda após obras,
+          remodelações e trabalhos de construção.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">✨</div>
+
         <h3>Limpezas Gerais</h3>
+
         <p>
-          Limpezas profundas para casas,
+          Limpezas completas para casas,
           apartamentos e outros espaços.
         </p>
-      </div>
 
-      <div class="card">
-        <div class="icon">🏨</div>
-        <h3>Hotéis e Alojamento</h3>
-        <p>
-          Apoio de limpeza para hotéis,
-          apartamentos turísticos e alojamento.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🏟️</div>
-        <h3>Espaços e Eventos</h3>
-        <p>
-          Limpeza de espaços, instalações,
-          eventos e zonas de utilização pública.
-        </p>
       </div>
 
     </div>
@@ -411,37 +751,60 @@
 
   <!-- SOBRE -->
 
-  <section>
+  <section class="about" id="sobre">
 
-    <div class="about">
+    <div class="about-container">
 
-      <h2 class="section-title">
-        Porquê a Too Clean?
-      </h2>
+      <div>
 
-      <p>
-        Somos uma equipa dedicada a deixar cada espaço
-        limpo, organizado e pronto para ser utilizado.
-      </p>
+        <small>
+          SOBRE A TOO CLEAN
+        </small>
 
-      <p>
-        Trabalhamos com responsabilidade, cuidado
-        e atenção aos detalhes.
-      </p>
-
-      <p>
-        Estamos disponíveis para serviços
-        pontuais ou regulares.
-      </p>
-
-      <div class="highlight">
-
-        <h3>📍 Lisboa e arredores</h3>
+        <h2>
+          Limpeza com <span>cuidado.</span>
+        </h2>
 
         <p>
-          Procuramos novas parcerias com particulares,
-          empresas, gestores de Alojamento Local,
-          condomínios, escritórios e outros espaços.
+          Na Too Clean acreditamos que um espaço
+          limpo faz toda a diferença.
+        </p>
+
+        <p>
+          Trabalhamos com dedicação e atenção
+          aos detalhes para entregar um resultado
+          em que os nossos clientes possam confiar.
+        </p>
+
+        <ul class="about-list">
+
+          <li>✓ Responsabilidade</li>
+          <li>✓ Atenção aos detalhes</li>
+          <li>✓ Flexibilidade</li>
+          <li>✓ Orçamento sem compromisso</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>
+          Para particulares e empresas
+        </h3>
+
+        <p>
+          Procuramos também novas parcerias com
+          gestores de Alojamento Local, empresas,
+          condomínios, hotéis, escritórios,
+          espaços comerciais e outros negócios.
+        </p>
+
+        <p>
+          Podemos trabalhar com serviços pontuais,
+          regulares, reforço de equipas ou apoio
+          em períodos de maior necessidade.
         </p>
 
       </div>
@@ -451,77 +814,92 @@
   </section>
 
 
-  <!-- CONTACTOS -->
+  <!-- PARCERIAS -->
 
-  <section class="contact">
+  <section class="business">
 
-    <h2>
-      Precisa de uma limpeza?
-    </h2>
+    <div class="business-box">
 
-    <p>
-      Peça já o seu orçamento sem compromisso.
-    </p>
+      <h2>
+        Procura uma equipa de limpeza?
+      </h2>
 
-    <div class="contact-box">
+      <p>
+        Se representa uma empresa, condomínio,
+        alojamento, hotel, escritório ou espaço
+        profissional, fale connosco.
+      </p>
 
-      <div class="contact-item">
-        📞
-        <a href="tel:+351927702072">
-          927 702 072
-        </a>
-      </div>
+      <a
+        href="mailto:geraltooclean@gmail.com"
+        class="btn btn-primary"
+      >
+        📧 Falar sobre uma parceria
+      </a>
 
-      <div class="contact-buttons">
+    </div>
 
-        <a
-          class="button whatsapp"
-          href="https://wa.me/351927702072"
-          target="_blank"
-        >
-          💬 WhatsApp
-        </a>
-
-      </div>
+  </section>
 
 
-      <div class="contact-item">
-        📞
-        <a href="tel:+351961318765">
-          961 318 765
-        </a>
-      </div>
+  <!-- CONTACTO -->
 
-      <div class="contact-buttons">
+  <section class="contact" id="contacto">
 
-        <a
-          class="button whatsapp"
-          href="https://wa.me/351961318765"
-          target="_blank"
-        >
-          💬 WhatsApp
-        </a>
+    <div class="contact-container">
 
-      </div>
+      <h2>
+        Vamos falar? ✨
+      </h2>
+
+      <p>
+        Peça o seu orçamento sem compromisso.
+        Estamos disponíveis para novos serviços e parcerias em Lisboa.
+      </p>
 
 
-      <div class="contact-item">
+      <div class="contact-info">
 
-        📧
-        <a href="mailto:geraltooclean@gmail.com">
-          geraltooclean@gmail.com
-        </a>
+        <div class="contact-line">
+          📞
+          <a href="tel:+351927702072">
+            927 702 072
+          </a>
+        </div>
 
-      </div>
+        <div class="contact-line">
+          📞
+          <a href="tel:+351961318765">
+            961 318 765
+          </a>
+        </div>
 
-      <div class="contact-buttons">
+        <div class="contact-line">
+          📧
+          <a href="mailto:geraltooclean@gmail.com">
+            geraltooclean@gmail.com
+          </a>
+        </div>
 
-        <a
-          class="button email-button"
-          href="mailto:geraltooclean@gmail.com"
-        >
-          📧 Enviar email
-        </a>
+
+        <div class="contact-buttons">
+
+          <a
+            href="https://wa.me/351927702072"
+            target="_blank"
+            class="btn btn-green"
+          >
+            💬 WhatsApp
+          </a>
+
+          <a
+            href="mailto:geraltooclean@gmail.com"
+            class="btn btn-primary"
+          >
+            📧 Enviar email
+          </a>
+
+        </div>
 
       </div>
 
@@ -530,21 +908,25 @@
   </section>
 
 
-  <!-- RODAPÉ -->
+  <!-- FOOTER -->
 
   <footer>
 
-    <p><strong>Too Clean ✨</strong></p>
+    <div class="footer-logo">
+      Too <span>Clean</span> ✨
+    </div>
 
-    <p>Serviços de limpeza em Lisboa</p>
+    <p>
+      Serviços profissionais de limpeza em Lisboa e arredores.
+    </p>
 
-    <p>📞 927 702 072</p>
+    <p>
+      927 702 072 · 961 318 765 · geraltooclean@gmail.com
+    </p>
 
-    <p>📞 961 318 765</p>
-
-    <p>📧 geraltooclean@gmail.com</p>
-
-    <p>© 2026 Too Clean. Todos os direitos reservados.</p>
+    <p>
+      © 2026 Too Clean. Todos os direitos reservados.
+    </p>
 
   </footer>
 
@@ -552,10 +934,10 @@
   <!-- WHATSAPP FLUTUANTE -->
 
   <a
-    class="floating-whatsapp"
     href="https://wa.me/351927702072"
     target="_blank"
-    aria-label="Contactar Too Clean pelo WhatsApp"
+    class="floating-whatsapp"
+    aria-label="WhatsApp Too Clean"
   >
     💬
   </a>
